@@ -52,3 +52,22 @@ sections.forEach((sec) => {
     });
   });
 });
+
+sections.forEach((sec) => sec.classList.add("section--hidden"));
+
+const showSection = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove("section--hidden");
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(showSection, {
+  root: null,
+  threshold: 0.15,
+});
+
+sections.forEach((section) => {
+  sectionObserver.observe(section);
+  // section.classList.add('section--hidden');
+});

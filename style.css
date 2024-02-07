@@ -62,7 +62,7 @@ html {
   margin-top: 10rem;
   line-height: 1.6em;
   font-weight: 700;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
   color: var(--color-font);
 }
 .introContainer {
@@ -83,6 +83,11 @@ section {
   font-size: 3rem;
   padding-right: 3rem;
   margin-bottom: 4rem;
+  transition: transform 1s, opacity 1s;
+}
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
 }
 
 .btn {
@@ -157,6 +162,7 @@ section {
   background-color: var(--color-dark-blue);
   height: 32vh;
 }
+
 /* Social Media Handles */
 .socialMedia {
   position: fixed;
@@ -253,46 +259,56 @@ section {
 
 /*Projects*/
 
-#project {
-  background-color: var(--color-background);
-  border: 0;
-}
-.card-skills {
+.project-container {
   display: flex;
   flex-direction: row;
-  font-size: 3rem;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-.card-skills span {
-  background-color: var(--color-secondary);
-  color: var(--color-background);
-  padding: 1rem 2rem;
-  border-radius: 30px;
-  margin: 0.5rem;
-  margin-left: 0;
-  font-size: 1rem;
-  background-color: var(--color-dark-blue);
+.card {
+  width: 35rem;
 }
-.card-skills span:hover {
+.card-img-top {
+  height: 25rem;
+  width: 35rem;
+}
+
+.card-title {
+  font-size: 2.5rem;
+}
+.card-text {
+  font-size: large;
+  margin-bottom: 0;
+}
+
+.project-skill-container {
+  display: flex;
+  flex-direction: row;
+}
+.project-skill {
+  font-size: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+  background-color: var(--color-dark-blue);
+  color: var(--color-background);
+  padding: 6px 12px;
+  border-radius: 15px;
   opacity: 0.9;
 }
 
-#slides {
-  background-color: var(--color-secondary);
+.project-skill:hover {
+  opacity: 1;
 }
-#rlbtn {
-  z-index: 100;
-  font-size: 50px;
-  color: var(--color-font);
-}
-.card-text li {
-  color: var(--color-font);
-  list-style-type: none;
+.project-link {
   font-size: 1.5rem;
 }
-
-#description {
-  color: var(--color-font);
+.project-link i {
+  color: blue;
+  font-size: 1.5rem;
 }
 
 .act {
