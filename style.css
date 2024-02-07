@@ -261,15 +261,17 @@ section {
 
 .project-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 0;
   padding: 0;
 }
 
 .card {
   width: 35rem;
+  margin: 2rem;
 }
 .card-img-top {
   height: 25rem;
